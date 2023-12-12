@@ -1,0 +1,8 @@
+Image training data set is compiled from all students in our section, as each student created a set of training images and annotated the images with bounding boxes. This training dataset can be retrieved from the streetwatch repository,where all scripts were combined and accessed by the collect_images.py script. Access to an account with access to the Google Streetview API is required for image collection. Further instructions for image collection can be found in the streetwatch repo. Linked here: https://github.com/pdashk/streetwatch
+
+The package COCOMerge is utilized in order to merge all seperate COCO annotations into 1 COCO annotations file. One of the image sets (full image set created by 1 student) will be used as a validation set, while the other valid images will be used for training.
+Name the training set COCO annotations "train.json" and the validations annotations "valid.json" and put them in "/data/annotations/" directory. Images must be downloaded via streetwatch repository and put in "/data/images" directory.
+
+In order to train the model, clone this git repo and insert annotations ("train.json", "valid.json") into "data/annotations/" directory, and upload images to "data/images/" directory. The "structure_detr.ipynb" notebook outlines the training of the model, but also allows for my pretrained model to be downloaded and inserted into "outpath" directory and then loaded into the notebook.
+
+Trained model weights can be downloaded here: https://drive.google.com/file/d/1fMGxV-Fj2L1GL2ajn7GuAeak-wum2GM2/view?usp=share_link
